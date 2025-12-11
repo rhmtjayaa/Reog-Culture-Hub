@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reog Culture Hub - Experience the Magic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="svg-animations.css" />
+  <link rel="stylesheet" href="performance-optimizations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Sans+Javanese:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="https://play-lh.googleusercontent.com/_iPoOzerjOYbkOlIbVwT8cQBkYegzgkR9NoeIoP-ji2tevACzqGVIAexSdOQOndh4yU=w480-h960-rw" type="image/x-icon">
+  
+  <!-- Enhanced Background Effects -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <!-- Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  
+  <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="shimmer-bg">
+  <!-- Enhanced Loading Animation -->
+  <div class="loading-container" id="loadingContainer">
+    <div class="loading-content">
+      <svg class="loading-reog" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="loadingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#b30000;stop-opacity:1" />
+          </linearGradient>
+          <filter id="shimmer">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+            <feSpecularLighting result="specOut" in="blur" specularExponent="20" lighting-color="white">
+              <fePointLight x="50" y="50" z="200" />
+            </feSpecularLighting>
+            <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut2" />
+            <feComposite in="SourceGraphic" in2="specOut2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+          </filter>
+        </defs>
+        <circle cx="60" cy="60" r="50" fill="none" stroke="url(#loadingGradient)" stroke-width="4" stroke-dasharray="157" stroke-dashoffset="157" filter="url(#shimmer)">
+          <animate attributeName="stroke-dashoffset" from="157" to="0" dur="1.5s" repeatCount="indefinite" />
+        </circle>
+        <path d="M60 20 L75 50 L105 50 L82.5 70 L97.5 100 L60 80 L22.5 100 L37.5 70 L15 50 L45 50 Z" fill="url(#loadingGradient)" filter="url(#shimmer)">
+          <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#FFD700;#FFA500;#b30000;#FFD700" dur="3s" repeatCount="indefinite" />
+        </path>
+      </svg>
+      <div class="loading-text">Loading Reog Culture Magic...</div>
+    </div>
+  </div>
+
+  <!-- Enhanced Interactive Background Particles -->
+  <div class="interactive-background">
+    <canvas id="particleCanvas"></canvas>
+    <svg class="floating-svg particle-1" width="100" height="100" viewBox="0 0 100 100">
+      <path d="M50 10 Q65 35 50 60 Q35 35 50 10" fill="#FFD700" opacity="0.6" filter="url(#shimmer)">
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="8s" repeatCount="indefinite" />
+      </path>
+    </svg>
+
+    <svg class="floating-svg particle-2" width="80" height="80" viewBox="0 0 80 80">
+      <circle cx="40" cy="40" r="30" fill="none" stroke="#b30000" stroke-width="2" opacity="0.5">
+        <animate attributeName="r" values="30;35;30" dur="4s" repeatCount="indefinite" />
+      </circle>
+    </svg>
+
+    <svg class="floating-svg particle-3" width="120" height="120" viewBox="0 0 120 120">
+      <path d="M60 20 L75 50 L105 50 L82.5 70 L97.5 100 L60 80 L22.5 100 L37.5 70 L15 50 L45 50 Z" fill="#FFD700" opacity="0.4" filter="url(#shimmer)">
+        <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="6s" repeatCount="indefinite" additive="sum" />
+      </path>
+    </svg>
+  </div>
+
+  <header class="header fade-in">
+    <!-- Enhanced Traditional Batik Pattern Background -->
+    <div class="batik-pattern">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="batikPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M10 2 Q15 8 10 14 Q5 8 10 2" stroke="#FFD700" stroke-width="0.5" fill="none" opacity="0.3"/>
+            <circle cx="5" cy="5" r="1" fill="#b30000" opacity="0.4"/>
+            <circle cx="15" cy="15" r="1" fill="#FFD700" opacity="0.4"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#batikPattern)"/>
+      </svg>
+    </div>
+
+    <!-- Enhanced Floating Cultural Elements -->
+    <div class="floating-elements">
+      <div class="cultural-motif motif-1">
+        <svg viewBox="0 0 50 50">
+          <path d="M25 5 L30 15 L40 15 L32 22 L35 32 L25 25 L15 32 L18 22 L10 15 L20 15 Z" fill="#FFD700" opacity="0.6" filter="url(#shimmer)">
+            <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="20s" repeatCount="indefinite"/>
+          </path>
+        </svg>
+      </div>
+      <div class="cultural-motif motif-2">
+        <svg viewBox="0 0 40 40">
+          <path d="M20 5 Q25 15 20 25 Q15 15 20 5" stroke="#b30000" stroke-width="2" fill="none" opacity="0.5">
+            <animate attributeName="stroke-dasharray" values="0 50;50 0" dur="4s" repeatCount="indefinite"/>
+          </path>
+        </svg>
+      </div>
+      <div class="cultural-motif motif-3">
+        <svg viewBox="0 0 35 35">
+          <circle cx="17.5" cy="17.5" r="12" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.4" filter="url(#shimmer)">
+            <animate attributeName="r" values="12;15;12" dur="6s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
+    </div>
+
+    
+      <!-- Enhanced Title with Cultural Typography -->
+      <div class="title-container">
+        <h1 class="main-title">
+          <span class="title-accent">ꦫꦺꦴꦒ꧀</span>
+          <span class="title-main">Culture Hub</span>
+        </h1>
+        <div class="title-decoration">
+          <svg width="200" height="20" viewBox="0 0 200 20">
+            <path d="M10 10 Q50 5 100 10 Q150 15 190 10" stroke="#FFD700" stroke-width="2" fill="none" opacity="0.6" filter="url(#shimmer)">
+              <animate attributeName="stroke-dasharray" values="0 200;200 0" dur="5s" repeatCount="indefinite"/>
+            </path>
+          </svg>
+        </div>
+        <p class="subtitle">Portal Digital Pelestarian Reog Kendang Tulungagung & Reog Ponorogo</p>
+        <div class="cultural-quote">
+          <span class="quote-mark">❝</span>
+          <span class="quote-text">ꦲꦤꦶꦫ ꦢꦶꦥꦸꦤ꧀ ꦏꦿꦶꦱ꧀ꦛꦶ ꦢꦤ꧀ ꦱꦿꦶ</span>
+          <span class="quote-mark">❞</span>
+        </div>
+        
+        <!-- NEW: Book Tickets Button -->
+        <div class="hero-cta">
+          <button class="ticket-cta-btn" onclick="scrollToTickets()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+              <path d="M22 10V6c0-1.11-.9-2-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-11 7.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm0-3c-.83 0-1.5-.67-1.5-1.5S10.17 11.5 11 11.5s1.5.67 1.5 1.5S11.83 14.5 11 14.5zm0-3c-.83 0-1.5-.67-1.5-1.5S10.17 8.5 11 8.5s1.5.67 1.5 1.5S11.83 11.5 11 11.5z"/>
+            </svg>
+            Book Your Experience
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <div class="logo">
+        <!-- Animated Logo SVG -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+          <path d="M12 2 L14 8 L20 8 L15 12 L17 18 L12 14 L7 18 L9 12 L4 8 L10 8 Z" />
+        </svg>
+        REOG
+      </div>
+      <button class="menu-toggle">☰</button>
+      <ul class="nav-links">
+        <li>
+          <a href="#sejarah">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="#FFD700">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            Sejarah
+          </a>
+        </li>
+        <li>
+          <a href="#unsur">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="#FFD700">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            Unsur Reog
+          </a>
+        </li>
+        <li>
+          <a href="#galeri">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="#FFD700">
+              <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+            </svg>
+            Galeri
+          </a>
+        </li>
+        <li>
+          <a href="#tiket">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="#FFD700">
+              <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
+            </svg>
+            Tiket
+          </a>
+        </li>
+        <li>
+          <a href="#lokasi">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="#FFD700">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            Lokasi
+          </a>
+        </li>
+        <li>
+          <a href="#sanggar">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="#FFD700">
+              <path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 4l6 6v6H6v-6l6-6z"/>
+            </svg>
+            Sanggar
+          </a>
+        </li>
+        <li>
+          <a href="#kontak">
+            <svg class="nav-svg-icon" viewBox="0 0 24 24" fill="#FFD700">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Kontak
+          </a>
+        </li>
+        <li><button id="darkModeBtn" class="toggle-dark">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+<section class="hero-video">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="3880863955-preview.mp4" type="video/mp4">
+  </video>
+
+ 
+
+  <!-- Animated Hero Text with SVG -->
+  <div class="hero-text">
+    <svg width="90" height="60" viewBox="0 0 60 60" style="display: inline-block; vertical-align: middle; margin-right: 15px;">
+      <path d="M30 5 L35 20 L50 20 L37.5 30 L42.5 45 L30 35 L17.5 45 L22.5 30 L10 20 L25 20 Z" fill="#FFD700" filter="url(#shimmer)">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+      </path>
+    </svg>
+    Reog Jawa Timur: Warisan Budaya Tak Ternilai
+  </div>
+</section>
+
+  <!-- Enhanced SVG Background Pattern -->
+ 
+
+  <main class="container">
+
+    <section id="sejarah" class="section slide-up sejarah-wrap">
+      <div class="sejarah-img svg-reveal">
+        <img src="sejarah-reog.jpg" alt="Sejarah Reog" />
+        <!-- Decorative SVG overlay -->
+        <svg class="card-svg-decoration" viewBox="0 0 60 60"></svg>
+          <path d="M30 5 L35 15 L45 15 L37 22 L40 32 L30 25 L20 32 L23 22 L15 15 L25 15 Z" fill="#FFD700" filter="url(#shimmer)"/>
+        </svg>
+      </div>
+
+      <div class="sejarah-text svg-reveal">
+        <h2>Sejarah Kesenian Reog</h2>
+        <p>
+          Reog merupakan kesenian adat Jawa Timur, dengan pusat perkembangan Ponorogo dan Tulungagung. Unsur utama
+          seperti Warok, Jathil, dan Dadak Merak menyimbolkan filosofi kekuatan, keberanian, dan karisma. Reog bukan
+          sekadar pertunjukan, tetapi identitas budaya yang diwariskan secara turun-temurun.
+        </p>
+        <div class="sejarah-cta">
+          <button id="openTimelineBtn">Lihat Timeline Interaktif</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider SVG -->
+    <svg class="section-divider" viewBox="0 0 1200 100">
+      <path d="M0 50 Q300 20 600 50 T1200 50" stroke="#FFD700" stroke-width="2" fill="none" opacity="0.3" filter="url(#shimmer)">
+        <animate attributeName="stroke-dasharray" values="0 1200;1200 0" dur="3s" repeatCount="indefinite" />
+      </path>
+    </svg>
+
+    <section id="unsur" class="section grey-bg slide-up">
+      <h2>Unsur & Tokoh Utama Reog</h2>
+      <div class="grid-3">
+        <div class="card fade-in svg-reveal">
+          <img src="images.jpg" alt="Warok">
+          <!-- Warok SVG Icon -->
+          <svg class="card-svg-decoration" viewBox="0 0 60 60">
+            <circle cx="30" cy="30" r="25" fill="none" stroke="#b30000" stroke-width="3"/>
+            <path d="M30 15 L35 25 L45 25 L37 32 L40 42 L30 35 L20 42 L23 32 L15 25 L25 25 Z" fill="#FFD700" filter="url(#shimmer)"/>
+          </svg>
+          <h3>Warok</h3>
+          <p>Lambang kebijaksanaan, kekuatan spiritual, dan kepemimpinan. 
+            Warok berpenampilan hitam, tegap, dan bergerak tegas namun tenang, simbol kekuatan yang berpadu dengan pengendalian diri.</p>
+        </div>
+        <div class="card fade-in delay-1 svg-reveal">
+          <img src="jathilan.jpg" alt="Jathil">
+          <!-- Jathil SVG Icon -->
+          <svg class="card-svg-decoration" viewBox="0 0 60 60">
+            <path d="M20 40 Q30 25 40 40" stroke="#FFD700" stroke-width="3" fill="none"/>
+            <circle cx="25" cy="35" r="5" fill="#b30000"/>
+            <circle cx="35" cy="35" r="5" fill="#b30000"/>
+          </svg>
+          <h3>Jathil</h3>
+          <p>Penari berkuda yang menampilkan keindahan gerak dan kekompakan.
+             Tokoh ini menjadi simbol kekuatan pasukan Raja Klono Sewandono dalam cerita Reog. 
+             Jathil berfungsi sebagai penambah dinamika, keindahan, dan kekuatan visual dalam Reog Ponorogo, sekaligus menjadi identitas budaya yang merepresentasikan semangat, ketekunan, dan kelincahan masyarakat Ponorogo.</p>
+        </div>
+        <div class="card fade-in delay-2 svg-reveal">
+          <img src="reogponorogo.jpg" alt="Dadak Merak">
+          <!-- Dadak Merak SVG Icon -->
+          <svg class="card-svg-decoration" viewBox="0 0 60 60">
+            <path d="M30 10 L25 20 L15 20 L22 27 L19 37 L30 30 L41 37 L38 27 L45 20 L35 20 Z" fill="#FFD700" filter="url(#shimmer)">
+              <animateTransform attributeName="transform" type="rotate" from="0 30 30" to="360 30 30" dur="8s" repeatCount="indefinite" />
+            </path>
+          </svg>
+          <h3>Dadak Merak</h3>
+          <p>Ikon utama Reog dengan kepala singa dan mahkota merak megah. 
+            Merak yang indah melambangkan kemegahan.
+            Singa melambangkan kekuatan raja.
+            Keduanya jadi simbol "kekuatan yang indah namun menakutkan." 
+            Dadak Merak merupakan simbol kebesaran dan kewibawaan dalam Reog, menampilkan perpaduan kekuatan, keindahan, dan keterampilan tinggi melalui topeng megah serta gerakannya yang dominan.</p>
+        </div>
+      </div>
+    </section>
+
+   <section id="galeri" class="section slide-up">
+  <h2>Galeri Reog</h2>
+  <p class="subtext">Dokumentasi aksi terbaik Reog Ponorogo & Kendang Tulungagung</p>
+
+  <div class="gallery-grid">
+    <div class="svg-reveal">
+      <img src="atraksi%20reokpnrg1.png" alt="Atraksi Reog Ponorogo 1" />
+      <!-- Gallery SVG Badge -->
+      <svg class="interactive-svg" style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px;" viewBox="0 0 30 30">
+        <path d="M15 3 L18 9 L24 9 L19 13 L21 19 L15 15 L9 19 L11 13 L6 9 L12 9 Z" fill="#FFD700" filter="url(#shimmer)"/>
+      </svg>
+    </div>
+    <div class="svg-reveal">
+      <img src="atraksireogpnrg2.jpg" alt="Atraksi Reog Ponorogo 2" />
+      <svg class="interactive-svg" style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px;" viewBox="0 0 30 30">
+        <path d="M15 3 L18 9 L24 9 L19 13 L21 19 L15 15 L9 19 L11 13 L6 9 L12 9 Z" fill="#FFD700" filter="url(#shimmer)"/>
+      </svg>
+    </div>
+    <div class="svg-reveal">
+      <img src="atraksireogkendang1.jpg" alt="Atraksi Reog Kendang 1" />
+      <svg class="interactive-svg" style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px;" viewBox="0 0 30 30">
+        <path d="M15 3 L18 9 L24 9 L19 13 L21 19 L15 15 L9 19 L11 13 L6 9 L12 9 Z" fill="#FFD700" filter="url(#shimmer)"/>
+      </svg>
+    </div>
+    <div class="svg-reveal">
+      <img src="atraksireogkendang2.jpg" alt="Atraksi Reog Kendang 2" />
+      <svg class="interactive-svg" style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px;" viewBox="0 0 30 30">
+        <path d="M15 3 L18 9 L24 9 L19 13 L21 19 L15 15 L9 19 L11 13 L6 9 L12 9 Z" fill="#FFD700" filter="url(#shimmer)"/>
+      </svg>
+    </div>
+    <div class="svg-reveal">
+      <img src="jathilan.jpg" alt="Jathil Reog" />
+      <svg class="interactive-svg" style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px;" viewBox="0 0 30 30">
+        <path d="M15 3 L18 9 L24 9 L19 13 L21 19 L15 15 L9 19 L11 13 L6 9 L12 9 Z" fill="#FFD700" filter="url(#shimmer)"/>
+      </svg>
+    </div>
+    <div class="svg-reveal">
+      <img src="reogponorogo.jpg" alt="Reog Ponorogo" />
+      <svg class="interactive-svg" style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px;" viewBox="0 0 30 30">
+        <path d="M15 3 L18 9 L24 9 L19 13 L21 19 L15 15 L9 19 L11 13 L6 9 L12 9 Z" fill="#FFD700" filter="url(#shimmer)"/>
+      </svg>
+    </div>
+    <div class="svg-reveal">
+      <img src="sejarah-reog.jpg" alt="Sejarah Reog" />
+      <svg class="interactive-svg" style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px;" viewBox="0 0 30 30">
+        <path d="M15 3 L18 9 L24 9 L19 13 L21 19 L15 15 L9 19 L11 13 L6 9 L12 9 Z" fill="#FFD700" filter="url(#shimmer)"/>
+      </svg>
+    </div>
+    <div class="svg-reveal">
+      <img src="waroksanggarmahkota.jpg" alt="Warok Sanggar Mahkota" />
+      <svg class="interactive-svg" style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px;" viewBox="0 0 30 30">
+        <path d="M15 3 L18 9 L24 9 L19 13 L21 19 L15 15 L9 19 L11 13 L6 9 L12 9 Z" fill="#FFD700" filter="url(#shimmer)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+    <section id="sanggar" class="section grey-bg slide-up">
+      <h2>Sanggar Reog Resmi Jawa Timur</h2>
+      <div class="sanggar-grid">
+        <div class="sanggar-card svg-reveal">
+          <img src="sanggarsingobarong.jpg" alt="Sanggar Ponorogo 1">
+          <p><strong>Sanggar Singa Barong</strong> – Ponorogo</p>
+          <!-- Sanggar SVG Badge -->
+          <svg class="card-svg-decoration" viewBox="0 0 40 40">
+            <path d="M20 5 L23 12 L30 12 L24 17 L26 24 L20 19 L14 24 L16 17 L10 12 L17 12 Z" fill="#FFD700" filter="url(#shimmer)"/>
+          </svg>
+        </div>
+        <div class="sanggar-card svg-reveal">
+          <img src="waroksanggarmahkota.jpg" alt="Sanggar Ponorogo 2">
+          <p><strong>Sanggar Warok Mahkota</strong> – Ponorogo</p>
+          <svg class="card-svg-decoration" viewBox="0 0 40 40">
+            <path d="M20 5 L23 12 L30 12 L24 17 L26 24 L20 19 L14 24 L16 17 L10 12 L17 12 Z" fill="#FFD700" filter="url(#shimmer)"/>
+          </svg>
+        </div>
+        <div class="sanggar-card svg-reveal">
+          <img src="sanggarreogkendang.jpg" alt="Reog Kendang TA">
+          <p><strong>Sanggar Reog Kendang</strong> – Tulungagung</p>
+          <svg class="card-svg-decoration" viewBox="0 0 40 40">
+            <path d="M20 5 L23 12 L30 12 L24 17 L26 24 L20 19 L14 24 L16 17 L10 12 L17 12 Z" fill="#FFD700" filter="url(#shimmer)"/>
+          </svg>
+        </div>
+        <div class="sanggar-card svg-reveal">
+          <img src="kenconomuda.jpg" alt="Reog Tulungagung">
+          <p><strong>Sanggar Kencono Mudo</strong> – Tulungagung</p>
+          <svg class="card-svg-decoration" viewBox="0 0 40 40">
+            <path d="M20 5 L23 12 L30 12 L24 17 L26 24 L20 19 L14 24 L16 17 L10 12 L17 12 Z" fill="#FFD700" filter="url(#shimmer)"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="section slide-up">
+      <h2>Kontak & Tim</h2>
+      <p>Hubungi kami untuk kerja sama, pertunjukan, atau pelestarian budaya. Di samping adalah beberapa penghubung dan praktisi yang akrab dengan Reog Ponorogo.</p>
+
+      <div class="contact-grid">
+        <div class="team-grid">
+          <div class="team-card svg-reveal">
+            <img class="team-img" src="reogponorogo.jpg" alt="H. Sutrisno - Warok" />
+            <h3>H. Sutrisno</h3>
+            <p class="role">Warok Utama — Sanggar Singa Barong, Ponorogo</p>
+            <p class="contact-meta">📞 (0352) 111-222 • ✉️ sutrisno@reogculturehub.id</p>
+          </div>
+
+          <div class="team-card svg-reveal">
+            <img class="team-img" src="sanggarsingobarong.jpg" alt="Ibu Sari - Pelatih Tari" />
+            <h3>Ibu Sari</h3>
+            <p class="role">Pelatih Tari — Sanggar Singa Barong</p>
+            <p class="contact-meta">📞 (0352) 222-333 • ✉️ sari@reogculturehub.id</p>
+          </div>
+
+          <div class="team-card svg-reveal">
+            <img class="team-img" src="waroksanggarmahkota.jpg" alt="Pak Agus - Koordinator Seni" />
+            <h3>Pak Agus</h3>
+            <p class="role">Koordinator Seni — Warok Mahkota</p>
+            <p class="contact-meta">📞 (0352) 333-444 • ✉️ agus@reogculturehub.id</p>
+          </div>
+
+          <div class="team-card svg-reveal">
+            <img class="team-img" src="sanggarreogkendang.jpg" alt="Bu Rini - Manajer Acara" />
+            <h3>Bu Rini</h3>
+            <p class="role">Manajer Acara — Reog Kendang, Tulungagung</p>
+            <p class="contact-meta">📞 (0352) 444-555 • ✉️ rini@reogculturehub.id</p>
+          </div>
+        </div>
+
+        <!-- keep contact form, moved to the right column -->
+        <form class="contact-form svg-reveal">
+          <div style="position: relative;">
+            <input type="text" name="name" placeholder="Nama" required />
+            <svg style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="#b30000" opacity="0.3">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
+          <div style="position: relative;">
+            <input type="email" name="email" placeholder="Email" required />
+            <svg style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="#b30000" opacity="0.3">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <input type="text" name="subject" placeholder="Subjek" />
+          <textarea name="message" placeholder="Pesan Anda" required></textarea>
+          <button type="submit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+            Kirim Pesan
+          </button>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+    <!-- NEW: TICKET BOOKING SECTION -->
+    <section id="tiket" class="section slide-up ticket-section">
+      <h2>🎫 Pesan Tiket Pertunjukan</h2>
+      <p class="subtext">Nikmati pengalaman Reog yang memukau dengan pilihan paket yang beragam</p>
+
+      <div class="ticket-grid">
+        <div class="ticket-card">
+          <div class="ticket-header">
+            <span class="ticket-type">REGULAR</span>
+            <span class="ticket-price">Rp 75.000</span>
+          </div>
+          <div class="ticket-features">
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Akses pertunjukan utama</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Kursi reguler</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Welcome drink</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"></svg>
+              <li><svg width="16" height="18" viewBox="0 0 24 24" fill="#FFD700"></svg>
+             
+            </ul>
+          </div>
+          <button class="book-ticket-btn" onclick="openBookingModal('regular')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            Pesan Sekarang
+          </button>
+        </div>
+
+        <div class="ticket-card featured">
+          <div class="ticket-badge">POPULER</div>
+          <div class="ticket-header">
+            <span class="ticket-type">VIP</span>
+            <span class="ticket-price">Rp 150.000</span>
+          </div>
+          <div class="ticket-features">
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Akses pertunjukan utama</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Kursi VIP depan</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Welcome drink + Snack</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Meet & Greet artis</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Souvenir eksklusif</li>
+            </ul>
+          </div>
+          <button class="book-ticket-btn" onclick="openBookingModal('vip')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            Pesan Sekarang
+          </button>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-header">
+            <span class="ticket-type">VVIP</span>
+            <span class="ticket-price">Rp 250.000</span>
+          </div>
+          <div class="ticket-features">
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Semua fasilitas VIP</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Kursi VVIP istimewa</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Makanan & minuman premium</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Private photo session</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Transportasi antar-jemput</li>
+            </ul>
+          </div>
+          <button class="book-ticket-btn" onclick="openBookingModal('vvip')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            Pesan Sekarang
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: LOCATION SECTION WITH GOOGLE MAPS -->
+    <section id="lokasi" class="section grey-bg slide-up">
+      <h2>📍 Lokasi Pertunjukan</h2>
+      <p class="subtext">Temukan kami di lokasi strategis di jantung budaya Jawa Timur</p>
+
+      <div class="location-container">
+           
+        <div class="map-wrapper">
+          <div class="map-placeholder">
+            <div class="map-placeholder-content">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35899.99759617548!2d111.44512790663832!3d-7.864330598076585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79a02b0ef452d5%3A0xdaa2ff8b032c04df!2sGedung%20Kesenian%20&#39;PADEPOKAN%20REYOG&#39;!5e1!3m2!1sid!2sid!4v1765341244288!5m2!1sid!2sid" width="1500" height="1000" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
+              <h4>Interactive Map</h4>
+  
+            </div>
+          </div>
+          <div class="map-overlay">
+         
+            <div class="map-info">
+              <h3>🏛️ Gedung Kesenian 'PADEPOKAN REYOG'</h3>
+              <p><strong>Alamat:</strong> Jl. Pramuka No.19, Sultanagung, Nologaten, Kec. Ponorogo, Kabupaten Ponorogo, Jawa Timur 63411</p>
+              <p><strong>Telepon:</strong> (0352) 123-456</p>
+              <p><strong>Email:</strong> info@reogculturehub.com</p>
+              <div class="map-actions">
+                <button class="map-btn" onclick="getDirections(hre)">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M21.71 11.29l-9-9c-.39-.39-1.02-.39-1.41 0l-9 9c-.39.39-.39 1.02 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9c.39-.38.39-1.01 0-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></svg>
+                  Petunjuk Arah
+                </button>
+                <button class="map-btn" onclick="shareLocation()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+                  Bagikan Lokasi
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-details">
+          <h3>Informasi Penting</h3>
+          <div class="detail-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFD700"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <div>
+              <strong>Jadwal Pertunjukan:</strong>
+              <p>Setiap Sabtu & Minggu, 19.00 WIB</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFD700"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+            <div>
+              <strong>Fasilitas Parkir:</strong>
+              <p>Parkir luas untuk 100+ kendaraan</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div>
+              <strong>Aksesibilitas:</strong>
+              <p>Difabel friendly, tersedia kursi roda</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBookingModal()">&times;</span>
+      <h2>🎫 Form Pemesanan Tiket</h2>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="name">Nama Lengkap:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Nomor Telepon:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Tanggal Pertunjukan:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="tickets">Jumlah Tiket:</label>
+          <select id="tickets" name="tickets" required>
+            <option value="1">1 Tiket</option>
+            <option value="2">2 Tiket</option>
+            <option value="3">3 Tiket</option>
+            <option value="4">4 Tiket</option>
+            <option value="5">5 Tiket</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ticketType">Tipe Tiket:</label>
+          <input type="text" id="ticketType" name="ticketType" readonly>
+        </div>
+        <div class="total-price">
+          <strong>Total Harga: <span id="totalPrice">Rp 0</span></strong>
+        </div>
+        <button type="submit" class="submit-booking-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          Konfirmasi Pemesanan
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Timeline Modal (Interactive Sejarah) -->
+  <div id="timelineModal" class="modal timeline-modal">
+    <div class="modal-content timeline-content">
+      <span class="close" id="closeTimeline">&times;</span>
+      <h2>Timeline Sejarah Reog</h2>
+      <p class="subtext">Telusuri momen penting dalam perkembangan Reog Ponorogo</p>
+
+      <div class="timeline-view">
+        <div class="timeline-steps">
+          <div class="timeline-step" data-step="0">
+            <div class="tl-step-img"><img src="sejarah-reog.jpg" alt="Awal Mula" /></div>
+            <div class="tl-step-body">
+              <h3>Awal Mula</h3>
+              <p>Asal-usul cerita kerajaan Klono Sewandono dan simbolisme topeng Dadak Merak.</p>
+            </div>
+          </div>
+          <div class="timeline-step" data-step="1">
+            <div class="tl-step-img"><img src="reogponorogo.jpg" alt="Perkembangan" /></div>
+            <div class="tl-step-body">
+              <h3>Perkembangan</h3>
+              <p>Perkembangan bentuk pertunjukan, munculnya Warok dan Jathil sebagai tokoh utama.</p>
+            </div>
+          </div>
+          <div class="timeline-step" data-step="2">
+            <div class="tl-step-img"><img src="images.jpg" alt="Zaman Keemasan" /></div>
+            <div class="tl-step-body">
+              <h3>Zaman Keemasan</h3>
+              <p>Reog menjadi identitas kebudayaan daerah dan pertunjukan populer di upacara besar.</p>
+            </div>
+          </div>
+          <div class="timeline-step" data-step="3">
+            <div class="tl-step-img"><img src="jathilan.jpg" alt="Pelestarian" /></div>
+            <div class="tl-step-body">
+              <h3>Pelestarian</h3>
+              <p>Upaya pelestarian modern, sanggar, dan program pendidikan budaya.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-controls">
+          <button id="tlPrev" class="tl-btn">◀</button>
+          <div class="tl-thumbs">
+            <img class="tl-thumb active" data-step="0" src="sejarah-reog.jpg" alt="Awal" />
+            <img class="tl-thumb" data-step="1" src="reogponorogo.jpg" alt="Perkembangan" />
+            <img class="tl-thumb" data-step="2" src="images.jpg" alt="Keemasan" />
+            <img class="tl-thumb" data-step="3" src="jathilan.jpg" alt="Pelestarian" />
+          </div>
+          <button id="tlNext" class="tl-btn">▶</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer fade-in">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <!-- Footer SVG Animation -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFD700">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+          <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+        </path>
+      </svg>
+      <p>&copy; 2025 Reog Culture Hub — Pelestarian Reog Ponorogo & Kendang Tulungagung</p>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFD700">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+          <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+        </path>
+      </svg>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="svg-animations.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>

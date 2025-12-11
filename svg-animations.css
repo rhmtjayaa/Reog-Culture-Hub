@@ -1,0 +1,227 @@
+/* ===========================
+   SVG ANIMATIONS STYLES
+   =========================== */
+
+/* Hero SVG Animation Container */
+.svg-hero-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.reog-mascot {
+  width: 300px;
+  height: 300px;
+  animation: floatMascot 6s ease-in-out infinite;
+}
+
+@keyframes floatMascot {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Floating Decorative Elements */
+.floating-svg {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.floating-svg.particle-1 {
+  top: 20%;
+  left: 10%;
+  animation: float1 15s ease-in-out infinite;
+}
+
+.floating-svg.particle-2 {
+  top: 60%;
+  right: 15%;
+  animation: float2 20s ease-in-out infinite;
+}
+
+.floating-svg.particle-3 {
+  bottom: 30%;
+  left: 20%;
+  animation: float3 18s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(30px, -30px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, 40px) scale(1.2); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(20px, 20px) rotate(90deg); }
+  75% { transform: translate(-30px, -20px) rotate(270deg); }
+}
+
+/* SVG Icon Animations */
+.svg-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svg-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 4px 8px rgba(230, 161, 0, 0.3));
+}
+
+/* Card SVG Decorations */
+.card-svg-decoration {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 60px;
+  height: 60px;
+  opacity: 0.1;
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-svg-decoration {
+  opacity: 0.3;
+  transform: rotate(15deg) scale(1.2);
+}
+
+/* Loading SVG Animation */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--secondary) 0%, #b30000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loading-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.loading-reog {
+  width: 120px;
+  height: 120px;
+  animation: pulseLoading 1.5s ease-in-out infinite, colorShift 3s ease-in-out infinite;
+}
+
+@keyframes pulseLoading {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes colorShift {
+  0%, 100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(180deg); }
+}
+
+.loading-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  animation: bounceText 1s ease-in-out infinite;
+}
+
+@keyframes bounceText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Scroll-triggered SVG Animations */
+.svg-reveal {
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svg-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Background Pattern SVG */
+.svg-background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Interactive SVG Elements */
+.interactive-svg {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.interactive-svg:hover {
+  filter: brightness(1.2) saturate(1.3);
+}
+
+.interactive-svg:active {
+  transform: scale(0.95);
+}
+
+/* Navigation SVG Icons */
+.nav-svg-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.nav-links:hover .nav-svg-icon {
+  transform: rotate(360deg);
+}
+
+/* Section Divider SVG */
+.section-divider {
+  width: 100%;
+  height: 100px;
+  margin: 40px 0;
+  opacity: 0.1;
+}
+
+/* Responsive SVG */
+@media (max-width: 768px) {
+  .reog-mascot {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .floating-svg {
+    transform: scale(0.7);
+  }
+  
+  .card-svg-decoration {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,483 @@
+/* ===========================
+   RESET
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #e22828;
+  transition: background 0.3s, color 0.3s;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* ===========================
+   THEME COLORS - REOG STYLE
+=========================== */
+:root {
+  --primary: #b30000;   /* Merah Reog Ponorogo */
+  --secondary: #e6a100; /* Emas Kendang Tulungagung */
+  --dark: #1a1a1a;
+  --light: #ffffff;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+body.dark {
+  background: #121212;
+  color: #ddd;
+}
+
+body.dark .navbar {
+  background: #1d1d1d;
+}
+
+body.dark .section {
+  background: #1a1a1a;
+}
+
+body.dark .card,
+body.dark .sanggar-card {
+  background: #222;
+  color: #eee;
+  box-shadow: none;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)),
+              url('banner-reog.jpg') center/cover;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.header.red {
+  background: var(--primary);
+  color: #fff;
+}
+
+.header.black {
+  background: #000;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+  background: var(--primary);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-text {
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.grey-bg {
+  background: #f5f5f5;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section h2:after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--secondary);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* ===========================
+   SEJARAH GRID
+=========================== */
+.sejarah-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* ===========================
+   CARD GRID (Gerakan, Sanggar)
+=========================== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.18);
+}
+
+.card h3 {
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+/* ===========================
+   SANGGAR
+=========================== */
+.sanggar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.sanggar-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.sanggar-card:hover {
+  transform: scale(1.03);
+}
+
+/* ===========================
+   GALERI SLIDER
+=========================== */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  gap: 15px;
+  transition: none;
+  animation: none; /* hentikan pergeseran otomatis */
+}
+
+.slides img {
+  width: 100%;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+/* ===========================
+   CONTACT FORM
+=========================== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: auto;
+  max-width: 450px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #8b0000;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+  text-align: center;
+  padding: 25px;
+  background: #111;
+  color: #fff;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+.fade-in { animation: fadeIn 1s ease; }
+.slide-up { animation: slideUp 1s ease; }
+.zoom-in { animation: zoomIn 1.5s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1.2); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sanggar-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sejarah-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-3,
+  .sanggar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text {
+    font-size: 32px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--primary);
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+  }
+}
+
+/* ==== HERO VIDEO BACKGROUND ==== */
+.hero-video {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: -1;
+}
+
+/* ==== HERO VIDEO FULLSCREEN ==== */
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* FULLSCREEN */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  filter: brightness(60%);
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+/* Text on video */
+.hero-video .hero-text {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(0,0,0,0.9);
+  padding: 0 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-video .hero-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-video .hero-text {
+    font-size: 2rem;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+}
